@@ -59,7 +59,7 @@ Compared to GN, GKN consistently exhibits:
 - Reduced high-frequency oscillations
 - More stable coupling between training and generalization
 
-These observations support a geometric interpretation of normalization as a **metric regularizer on training dynamics**.
+These observations support a geometric interpretation of normalization as a **metric regularizer on training dynamics**. Please find the plots in final_project.ipynb
 
 ---
 
