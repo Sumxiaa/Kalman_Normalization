@@ -124,3 +124,16 @@ Across both parts, this project demonstrates that:
 
 MIT License
 
+## 📖 Citation
+
+This project is closely related to our prior work on Kalman-based optimization methods,  
+which was presented in the *Seminar on Geometry and Topology in Deep Learning*.
+
+```bibtex
+@inproceedings{xiakoala++,
+  title     = {KOALA++: Efficient Kalman-Based Optimization with Gradient-Covariance Products},
+  author    = {Xia, Zixuan and Davtyan, Aram and Favaro, Paolo},
+  booktitle = {The Thirty-ninth Annual Conference on Neural Information Processing Systems},
+}
+
+
