@@ -1,5 +1,5 @@
 # Kalman-Style Smoothing for Robust Learning  
-### Final Project for *Seminar: Geometry and Topology in Deep Learning*
+### Final Project for *Seminar Geometry and Topology in Deep Learning*
 
 ---
 
@@ -60,6 +60,13 @@ Compared to GN, GKN consistently exhibits:
 - More stable coupling between training and generalization
 
 These observations support a geometric interpretation of normalization as a **metric regularizer on training dynamics**. Please find the plots in final_project.ipynb
+
+**Geometric interpretation (accuracy space).**  
+We view training as a discrete trajectory γ(t) = (train_acc(t), test_acc(t)) in a 2D generalization space.  
+Compared to GN, GKN yields a substantially shorter trajectory (total arclength 132.7 vs 155.9) and smaller average step length (1.34 vs 1.58), indicating fewer epoch-to-epoch oscillations and less “wandering” in the train–test accuracy coupling.  
+
+Although turning-angle statistics are comparable in this projection, the reduced path length and step magnitude strongly support the claim that Kalman-style smoothing stabilizes training dynamics and improves robustness in the generalization trajectory.
+
 
 ---
 
