@@ -1,2 +1,126 @@
-# Kalman_Normalization
-Final project for Seminar Geometry and Topology in Deep Learning 
+# Kalman-Style Smoothing for Robust Learning  
+### Final Project for *Seminar: Geometry and Topology in Deep Learning*
+
+---
+
+## 📌 Overview
+
+This project explores **Kalman-style smoothing** as a general and robust strategy for learning under noisy statistics.  
+Rather than treating Kalman filtering as a strict state-space estimator, we adopt it as a **geometric and statistical smoothing principle**, applicable across different learning paradigms.
+
+The project consists of **two complementary parts**:
+
+1. **Normalization and Optimization Geometry in Deep Networks**  
+2. **Kalman-Based Reward Normalization in Reinforcement Learning**
+
+Together, these parts demonstrate how temporal smoothing of noisy signals can significantly stabilize training dynamics, improve robustness, and provide interpretable geometric structure in learning trajectories.
+
+---
+
+## 🧩 Part I: Kalman-Style Smoothing for Normalization  
+### (Image Classification with ResNet on CIFAR)
+
+### Motivation
+
+Normalization layers implicitly define a **coordinate system and local geometry** in feature space.  
+However, commonly used methods such as Batch Normalization and Group Normalization rely on instantaneous or weakly smoothed statistics, which can be noisy under small batch sizes or non-ideal training conditions.
+
+We propose **Kalman-Style Smoothing for Normalization**, instantiated as **Group Kalman-Inspired Normalization (GKN)**, which:
+- Computes GroupNorm-style per-sample statistics
+- Applies **temporal smoothing** to group-level moments
+- Reduces variance in statistical estimation without sacrificing convergence or accuracy
+
+### Key Idea
+
+Training dynamics are viewed as a **trajectory on a loss-induced manifold**.  
+Kalman-style smoothing acts as a low-pass filter along the *time dimension*, leading to:
+- Smoother optimization paths
+- Reduced curvature and noise in training trajectories
+- More stable generalization behavior
+
+### Experiments
+
+- Dataset: CIFAR-10 / CIFAR-100  
+- Architecture: ResNet variants  
+- Baselines: BatchNorm (BN), GroupNorm (GN)  
+- Metrics:
+  - Train / Test Loss and Accuracy
+  - Geometric trajectory analysis in loss and accuracy space
+  - Discrete speed, curvature (turning angle), and path length
+
+### Geometric Analysis
+
+We visualize training as curves in:
+- **Loss space**: (L_train, L_test)
+- **Accuracy space**: (Acc_train, Acc_test)
+
+Compared to GN, GKN consistently exhibits:
+- Lower trajectory curvature
+- Reduced high-frequency oscillations
+- More stable coupling between training and generalization
+
+These observations support a geometric interpretation of normalization as a **metric regularizer on training dynamics**.
+
+---
+
+## 🧠 Part II: Kalman-Based Reward Normalization in Reinforcement Learning  
+### (Policy Gradient Methods)
+
+### Background and Motivation
+
+Reinforcement learning often suffers from **high-variance and non-stationary reward signals**, which severely degrade training stability and sample efficiency—especially in policy gradient methods.
+
+In this part, we explore **Kalman-based reward normalization**, replacing conventional mean–std normalization with a lightweight **1D Kalman filter** applied directly to reward streams.
+
+### Method
+
+- Rewards are modeled as noisy observations of an underlying latent signal
+- A 1D Kalman filter provides adaptive, online normalization
+- The approach is plug-and-play, computationally lightweight, and compatible with standard RL pipelines
+
+### Algorithms and Environments
+
+- Algorithms: Actor-Critic (AC), PPO, GAE  
+- Environments: CartPole, LunarLander
+
+### Results
+
+Kalman-based reward normalization consistently provides:
+- Faster early-stage convergence
+- Reduced variance in learning curves
+- Improved stability across random seeds
+
+### Academic Context
+
+This reinforcement learning work was previously submitted to the **ICML New in ML Workshop**, an inclusive venue aimed at encouraging exploratory machine learning research by early-stage researchers.
+
+Although exploratory in nature, subsequent feedback and industry interest suggest that **Kalman-based reward normalization is a promising direction worthy of further investigation**.  
+We therefore include this work as the second part of the present project.
+
+---
+
+## 🧭 Unifying Perspective
+
+Across both parts, this project demonstrates that:
+
+> **Kalman-style smoothing provides a unifying geometric and statistical framework for stabilizing learning under noise.**
+
+- In supervised learning, it smooths normalization statistics and shapes optimization geometry.
+- In reinforcement learning, it smooths reward signals and stabilizes policy updates.
+
+---
+
+## 🔮 Future Directions
+
+- Learnable Kalman parameters (Q, R)
+- Uncertainty-aware normalization layers
+- State-dependent reward filtering
+- Extensions to continuous control and offline RL
+- Connections to information geometry and dynamical systems
+
+---
+
+## 📜 License
+
+MIT License
+
