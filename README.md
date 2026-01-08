@@ -16,6 +16,33 @@ The project consists of **two complementary parts**:
 Together, these parts demonstrate how temporal smoothing of noisy signals can significantly stabilize training dynamics, improve robustness, and provide interpretable geometric structure in learning trajectories.
 
 ---
+## 🔧 Environment Setup
+
+For part 1, the repository was tested with **Python ≥ 3.8** and **PyTorch ≥ 1.10**.  
+The codebase is lightweight and does not rely on any non-standard dependencies.
+
+We recommend using a virtual environment.
+
+
+### Part 1: Conda (Recommended)
+
+```bash
+conda create -n kalman_norm python=3.9 -y
+conda activate kalman_norm
+```
+
+Install required packages:
+```bash
+pip install torch torchvision numpy matplotlib tqdm
+```
+
+### Part 2: Google Colab
+
+
+
+
+
+---
 
 ## 🧩 Part I: Kalman-Style Smoothing for Normalization  
 ### (Image Classification with ResNet on CIFAR)
