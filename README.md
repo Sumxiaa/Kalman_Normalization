@@ -20,6 +20,20 @@ Together, these parts demonstrate how temporal smoothing of noisy signals can si
 ## 🧩 Part I: Kalman-Style Smoothing for Normalization  
 ### (Image Classification with ResNet on CIFAR)
 
+
+### 🚀 Quick Start: CIFAR-10 Training (Recommended)
+
+This project provides a **single, minimal entry point** to reproduce the core experimental results used in the final presentation for the *Seminar on Geometry and Topology in Deep Learning*.
+
+All CIFAR-10 experiments are run via:
+
+```bash
+python examples/cifar10_train.py \
+  --norm_type gkn \
+  --num_groups 4 \
+  --p_rate 0.1
+```
+
 ### Motivation
 
 Normalization layers implicitly define a **coordinate system and local geometry** in feature space.  
