@@ -138,7 +138,7 @@ In this part, we explore **Kalman-based reward normalization**, replacing conven
 
 ### Algorithms and Environments
 
-- Algorithms: Actor-Critic (AC), PPO, GAE  
+- Algorithms: Actor-Critic (AC), PPO  
 - Environments: CartPole, LunarLander
 
 ### Results
