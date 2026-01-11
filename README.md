@@ -38,6 +38,15 @@ pip install torch torchvision numpy matplotlib tqdm
 
 ### Part 2: Google Colab
 
+Note on a Weird Runtime Issue
+
+⚠️ Important:
+If you encounter an error when running the code below, please rerun the two cells above first, and then rerun the current cell.
+
+This issue is admittedly a bit strange. From our experience, it seems to be caused by an inconsistency between the Gym and NumPy environments, possibly related to version mismatches or how the runtime handles package states.
+
+If rerunning the two cells once does not fix the problem, try rerunning them multiple times (yes, really). In some cases, the error disappears after a few retries. Unfortunately, we do not yet have a clean or principled explanation for why this happens.
+
 
 
 
