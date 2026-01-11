@@ -88,6 +88,16 @@ Kalman-style smoothing acts as a low-pass filter along the *time dimension*, lea
   - Train / Test Loss and Accuracy
   - Geometric trajectory analysis in loss and accuracy space
   - Discrete speed, curvature (turning angle), and path length
+ 
+### 📊 Results: Image Classification Results (Test Accuracy)
+
+| Dataset    | Normalization | Test Accuracy (%) |
+|------------|---------------|-------------------|
+| CIFAR-10   | GN            | 88.12             |
+| CIFAR-10   | GKN (Ours)    | **88.47**         |
+| CIFAR-100  | GN            | 59.63             |
+| CIFAR-100  | GKN (Ours)    | **62.36**         |
+
 
 ### Geometric Analysis
 
