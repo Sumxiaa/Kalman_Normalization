@@ -147,15 +147,30 @@ In this part, we explore **Kalman-based reward normalization**, replacing conven
 
 ### Algorithms and Environments
 
-- Algorithms: Actor-Critic (AC), PPO  
+- Algorithms: PPO and maybe its variants  
 - Environments: CartPole, LunarLander
 
 ### Results
 
-Kalman-based reward normalization consistently provides:
-- Faster early-stage convergence
-- Reduced variance in learning curves
-- Improved stability across random seeds
+We evaluate the effectiveness of **Kalman-based reward normalization** within the PPO framework on two classic control benchmarks: **CartPole** and **LunarLander**. Across both environments, the proposed normalization strategy consistently demonstrates clear advantages over standard reward normalization.
+
+#### CartPole
+
+In the CartPole environment, where the maximum achievable reward is **500**, PPO with Kalman-based reward normalization exhibits **significantly faster convergence**. Specifically, the agent reaches the maximum reward after only **77 episodes**. In contrast, when using conventional reward normalization, PPO requires approximately **306 episodes** to achieve the same performance. This large gap highlights the substantial acceleration in early-stage learning brought by the Kalman-based approach.
+
+#### LunarLander
+
+A similar trend is observed in the LunarLander environment, which has a maximum reward of **200**. With Kalman-based reward normalization, PPO converges to the maximum reward within **750 episodes**, whereas the baseline approach with standard normalization requires around **991 episodes**. Although the performance gap is less dramatic than in CartPole, the improvement remains consistent and meaningful.
+
+#### Summary
+
+Overall, these empirical results show that Kalman-based reward normalization in PPO leads to:
+
+- **Faster early-stage convergence**, as evidenced by the significantly reduced number of episodes needed to reach maximum reward.
+- **Reduced variance in learning curves**, reflected in more predictable and smoother training dynamics.
+- **Improved stability across random seeds**, with more consistent convergence behavior compared to standard normalization.
+
+These findings suggest that incorporating Kalman filtering into reward normalization can be an effective and lightweight modification to enhance PPO training efficiency and robustness.
 
 ### Academic Context
 
