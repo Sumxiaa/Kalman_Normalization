@@ -217,5 +217,24 @@ which was presented in the *Seminar on Geometry and Topology in Deep Learning*.
   author    = {Xia, Zixuan and Davtyan, Aram and Favaro, Paolo},
   booktitle = {The Thirty-ninth Annual Conference on Neural Information Processing Systems},
 }
+```
+
+Other References of the project includes:
+```bibtex
+@inproceedings{wu2018group,
+  title={Group normalization},
+  author={Wu, Yuxin and He, Kaiming},
+  booktitle={Proceedings of the European conference on computer vision (ECCV)},
+  pages={3--19},
+  year={2018}
+}
+
+@article{schulman2017proximal,
+  title={Proximal policy optimization algorithms},
+  author={Schulman, John and Wolski, Filip and Dhariwal, Prafulla and Radford, Alec and Klimov, Oleg},
+  journal={arXiv preprint arXiv:1707.06347},
+  year={2017}
+}
+```
 
 
